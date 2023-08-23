@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Contact list</h2>
+      <a href="/contact/add" class="btn btn-primary mb-2"
+        >Add contact details</a
+      >
+      <% if (msg.length !== 0) { %>
+      <div class="alert alert-success" role="alert"><%= msg %></div>
+      <% } %>
+      <table class="table mt-3">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Number</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (contacts.length === 0) { %>
+          <tr>
+            <td colspan="4">
+              <div class="alert alert-danger fw-bold" role="alert">
+                Data contact not found!
+              </div>
+            </td>
+          </tr>
+          <% } %> <% contacts.forEach((contact,i) => { i++ %>
+          <tr>
+            <th scope="row"><%= i++ %></th>
+            <td><%= contact.name %></td>
+            <td><%= contact.number %></td>
+            <td>
+              <a
+                href="/contact/<%= contact.name %>"
+                class="btn btn-success badge rounded-pill"
+                ><i class="bi bi-info-circle"></i> Detail</a
+              >
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
