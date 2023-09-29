@@ -34,8 +34,3 @@ cd contact app
 npm i
 node app
 ```
-## License
-
-MIT
-
-**Free Software, Hell Yeah!**
