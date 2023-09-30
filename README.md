@@ -1,5 +1,5 @@
 #  Contact Aplication
-##  Simple application contacts without database
+##  Simple crud application contacts without database
 
 
 
